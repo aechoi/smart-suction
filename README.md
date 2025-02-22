@@ -15,3 +15,5 @@ Do the following commands in this directory.
 - Install this package in editable mode (for pytest and relative imports) `pip install -e .`
 
 The structure of `src\smart-suction` should be identical to the structure of `tests\`, following the convention found [here](https://docs.pytest.org/en/stable/explanation/goodpractices.html#tests-outside-application-code).
+
+Before pushing commits, you should run `pytest` in this directory to make sure all tests pass. If they don't, address them before pushing.
