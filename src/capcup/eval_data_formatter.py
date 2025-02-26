@@ -17,10 +17,11 @@ class EvalBoardData:
         """
         Args:
             file_path:"""
-        self.headers, self.cap_array, self.volt_temp_data = self._read_file(file_path)
+        self.trial_name = os.path.split(file_path)[1]
+        self.headers, self.cap_counts, self.volt_temp_data = self._read_file(file_path)
         self.sampling_period = float(self.headers["Conv. Time"].split()[0]) / 1000
         self.time = np.arange(
-            0, len(self.cap_array) * self.sampling_period, self.sampling_period
+            0, len(self.cap_counts) * self.sampling_period, self.sampling_period
         )
 
     def _read_file(self, file_path: str):
@@ -53,10 +54,10 @@ class EvalBoardData:
                     cap_data.append(int(data_columns[0], 16))
                     volt_temp_data.append(int(data_columns[1], 16))
 
-        cap_array = np.array(cap_data, dtype=np.int32)
+        cap_counts = np.array(cap_data, dtype=np.int32)
         volt_temp_array = np.array(volt_temp_data, dtype=np.int32)
 
-        return headers, cap_array, volt_temp_array
+        return headers, cap_counts, volt_temp_array
 
 
 def format_folder(folder_path: str):
@@ -64,6 +65,8 @@ def format_folder(folder_path: str):
     data_objects = []
     directory_items = os.listdir(folder_path)
     for item in directory_items:
+        if item == "Settings.txt":
+            continue
         item_path = os.path.join(folder_path, item)
         if os.path.isfile(item_path):
             data_objects.append(EvalBoardData(item_path))

@@ -8,7 +8,7 @@ import capcup.eval_data_formatter as edf
 def test_EvalBoardData():
     data_path = os.path.join(os.getcwd(), "tests", "data", "test_eval_data.txt")
     test_data_obj = edf.EvalBoardData(data_path)
-    assert len(test_data_obj.cap_array) == 1296
+    assert len(test_data_obj.cap_counts) == 1296
     assert test_data_obj.sampling_period == 0.062
     assert test_data_obj.headers["Channel"] == "1"
     assert test_data_obj.headers["Mode"] == "Single-Ended"

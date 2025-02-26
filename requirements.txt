@@ -1,5 +1,9 @@
 gdown
+ipykernel
+ipympl
 matplotlib
+notebook
 numpy
 pytest
+ruptures
 scipy
