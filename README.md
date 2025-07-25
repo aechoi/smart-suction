@@ -6,11 +6,11 @@ Repository for evaluating data collected for the smart suction cup project.
 
 Do the following commands in this directory.
 
-- Upgrade pip `python -m pip install --upgarde pip`
+- Upgrade pip `python -m pip install --upgrade pip`
 - Initialize a python virtual environment `python -m venv [virtual environment name]`
 - Activate the virtual environment
   - Windows `.\[virtual env name]\Scripts\activate`
-  - Linux\OSX `.\[virtual env name]\bin\activate`
+  - Linux\OSX `source .\[virtual env name]\bin\activate`
 - Install requirements `python -m pip install -r requirements.txt`
 - Install this package in editable mode (for pytest and relative imports) `pip install -e .`
 
