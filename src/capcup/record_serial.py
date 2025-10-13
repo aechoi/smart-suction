@@ -1,15 +1,24 @@
-import serial
-import matplotlib.pyplot as plt
+import argparse
 from collections import deque
+import serial
 import time
+
+import matplotlib.pyplot as plt
 import numpy as np
 
-file = "test.csv"
-file = "250929_1503_50mm_ring_centerG_ringT.csv"
-data_points = 8
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-f", "--file", type=str, default="test", help="File name to save data to"
+)
+args = parser.parse_args()
+
+file = args.file + ".csv"
+print("Saving to", file)
+data_points = 8 + 1
 window = 100
 
 ser = serial.Serial("/dev/ttyACM0", 9600, timeout=1)
+print("Attempting to read...")
 while True:
     try:
         line = ser.readline().decode("utf-8").strip()
@@ -18,14 +27,15 @@ while True:
             break
     except Exception as e:
         pass
+print("Stream read, starting")
 
 data = deque([values] * window, maxlen=window)
 offsets = np.array(values) - 10000 * np.arange(data_points)
 
 plt.ion()
 fig, ax = plt.subplots()
-lines = ax.plot(np.array(data) - offsets)
-ax.legend([f"Ch {i+1}" for i in range(data_points)], loc="upper left")
+channels = ax.plot(np.array(data) - offsets)
+ax.legend([f"C{i+1}" for i in range(data_points - 1)] + ["Actuation"], loc="upper left")
 ax.set_xlabel("Samples")
 ax.set_ylabel("Normalized and Offset ADC Counts")
 ax.set_title("Live Viewer")
@@ -45,9 +55,12 @@ with open(file, "w") as f:
             if len(values) != data_points:
                 continue
             data.append(values)
-            for line, datum, offset in zip(lines, zip(*data), offsets):
-                line.set_ydata(np.array(datum) - offset)
-                line.set_xdata(range(len(datum)))
+            for idx, (ch, datum, offset) in enumerate(
+                zip(channels, zip(*data), offsets)
+            ):
+                scale = 10000 if idx == data_points - 1 else 1
+                ch.set_ydata(np.array(datum) * scale - offset)
+                ch.set_xdata(range(len(datum)))
             ax.relim()
             ax.autoscale_view()
             plt.pause(0.01)

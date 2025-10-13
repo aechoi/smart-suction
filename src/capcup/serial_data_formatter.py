@@ -10,8 +10,19 @@ class SerialData:
         Args:
             file_path:"""
         self.trial_name = os.path.split(file_path)[1]
-        self.time, self.cap_counts = self._read_file(file_path)
+        self.time, self.cap_counts, self.actuations = self._read_file(file_path)
         self.sampling_period = np.mean(np.diff(self.time))
+
+        self.actuation_starts = (
+            np.where(np.diff(self.actuations.astype(int)) == 1)[0] + 1
+        )
+        self.actuation_ends = (
+            np.where(np.diff(self.actuations.astype(int)) == -1)[0] + 1
+        )
+        self.segment_starts = np.r_[
+            0, np.where(np.diff(self.actuations.astype(int)) == -1)[0][:-1] + 1
+        ]
+        self.segment_ends = np.where(np.diff(self.actuations.astype(int)) == 1)[0] + 1
 
     def _read_file(self, file_path: str):
         """Reads the file and extracts headers and numerical data as NumPy arrays."""
@@ -27,11 +38,11 @@ class SerialData:
                 timestamps.append(values[0])
                 cap_data.append(values[1:])
 
-        cap_counts = np.array(cap_data, dtype=np.int32)
-        # cap_counts = np.array(cap_data)
+        cap_counts = np.array(cap_data, dtype=np.int32)[:, :8]
+        actuations = np.array(cap_data, dtype=np.int32)[:, -1]
         timestamps = np.array(timestamps) - timestamps[0]
 
-        return timestamps, cap_counts
+        return timestamps, cap_counts, actuations
 
     def normalize(self, data):
         """Zero the data around its mean"""
