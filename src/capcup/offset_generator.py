@@ -202,7 +202,7 @@ class Box(Tool):
 def main():
     box = Box(x_size=100, y_size=100)
     cup = SuctionCup(diameter=40, lip_to_board_height=6.7, max_actuation=5)
-    num_samples = 2
+    num_samples = 100
     ground_truth = box.sample(num_samples, cup)
     ground_truth.to_csv("ground_truth.csv", index=False)
 
