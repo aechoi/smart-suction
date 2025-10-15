@@ -156,9 +156,16 @@ def triangles(jubilee, suction_cup, duration=10):
     start_time = time.time()
 
     while time.time() - start_time < duration:
-        jubilee.move_xyz_absolute(*(suction_cup.origin - actuation))
-        jubilee.move_xyz_absolute(*suction_cup.origin)
+        actuate_absolute(jubilee, suction_cup.origin - actuation)
+        actuate_absolute(jubilee, suction_cup.origin)
         jubilee.gcode("M400")  # finish moves before moving on to next loop.
+
+
+def actuate_absolute(jubilee, coordinate):
+    jubilee.gcode("M400")
+    jubilee.gcode("M42 P4 S1")
+    jubilee.gcode("M400")
+    jubilee.move_xyz_absolute(*coordinate)
 
 
 def main():
