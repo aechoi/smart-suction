@@ -11,9 +11,17 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "-f", "--file", type=str, default="test", help="File name to save data to"
 )
+parser.add_argument(
+    "-t",
+    "--time_stop",
+    type=int,
+    default=0,
+    help="Time from last actuation to stop recording",
+)
 args = parser.parse_args()
 
 file = args.file + ".csv"
+time_stop = args.time_stop
 print("Saving to", file)
 
 # Serial Setup
@@ -80,8 +88,12 @@ class BufferOverflowError(IOError):
 
 monitor = BufferMonitor(ser)
 buffer = ""
+last_actuation = time.time()
 with open(file, "w") as f:
     while True:
+        if (time_stop != 0) and (time.time() - last_actuation > time_stop):
+            print(f"Last actuation longer than {time_stop} seconds ago. Stopping.")
+            break
         chunk = monitor.safe_read(ser.in_waiting or 1).decode()
         if not chunk:
             continue
@@ -99,6 +111,8 @@ with open(file, "w") as f:
                     raise ValueError(
                         f"Expected {data_points} values, got {len(values)}. {values}"
                     )
+                if values[-1] == 1:
+                    last_actuation = time.time()
                 data.append(values)
 
                 f.write(str(time.time()) + " " + line + "\n")
