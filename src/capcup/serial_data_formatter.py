@@ -9,7 +9,7 @@ class SerialData:
         """
         Args:
             file_path:"""
-        self.trial_name = os.path.split(file_path)[1]
+        self.name = os.path.split(file_path)[1]
         self.time, self.cap_counts, self.actuations = self._read_file(file_path)
         self.sampling_period = np.mean(np.diff(self.time))
 
@@ -54,7 +54,7 @@ class SerialData:
 
     def normalize(self, data):
         """Zero the data around its mean"""
-        return data - np.mean(data, axis=0)
+        return data - np.mean(data[: self.segment_ends[0]], axis=0)
 
 
 def format_folder(folder_path: str):
