@@ -70,7 +70,7 @@ def tool_centric(labeled_data: pd.DataFrame, box: Box, cup: SuctionCup):
 
 
 def main():
-    file_name = "ground_truth.csv"  # Update with your file path
+    file_name = "src/capcup/data/translation_gt/ground_truth_10x.csv"  # Update with your file path
 
     labeled_data = pd.read_csv(file_name)
     box = Box(x_size=100, y_size=100)

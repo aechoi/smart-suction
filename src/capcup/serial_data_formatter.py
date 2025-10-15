@@ -9,7 +9,7 @@ class SerialData:
         """
         Args:
             file_path:"""
-        self.trial_name = os.path.split(file_path)[1]
+        self.name = os.path.split(file_path)[1]
         self.time, self.cap_counts, self.actuations = self._read_file(file_path)
         self.sampling_period = np.mean(np.diff(self.time))
 
@@ -26,7 +26,7 @@ class SerialData:
 
     def _read_file(self, file_path: str):
         """Reads the file and extracts headers and numerical data as NumPy arrays."""
-        timestamps, cap_data = [], []
+        timestamps, cap_data, actuation = [], [], []
 
         with open(file_path, "r", encoding="utf-8") as f:
             for line in f.readlines():
@@ -34,19 +34,27 @@ class SerialData:
                 if not line:
                     continue
 
-                values = [float(entry) for entry in line.split(" ")]
-                timestamps.append(values[0])
-                cap_data.append(values[1:])
+                raw_values = line.split(" ")
+                if len(raw_values) != 10:
+                    continue
+                for raw_entry in raw_values[1:-1]:
+                    if len(raw_entry) != 8:
+                        break
+                else:
+                    values = [float(entry) for entry in raw_values]
+                    timestamps.append(values[0])
+                    cap_data.append(values[1:9])
+                    actuation.append(values[-1])
 
-        cap_counts = np.array(cap_data, dtype=np.int32)[:, :8]
-        actuations = np.array(cap_data, dtype=np.int32)[:, -1]
+        cap_counts = np.array(cap_data, dtype=np.int32)
+        actuations = np.array(actuation, dtype=np.int32)
         timestamps = np.array(timestamps) - timestamps[0]
 
         return timestamps, cap_counts, actuations
 
     def normalize(self, data):
         """Zero the data around its mean"""
-        return data - np.mean(data, axis=0)
+        return data - np.mean(data[: self.segment_ends[0]], axis=0)
 
 
 def format_folder(folder_path: str):
