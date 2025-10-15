@@ -19,17 +19,16 @@ parser.add_argument(
     help="Time from last actuation to stop recording",
 )
 parser.add_argument(
-    "-v",
-    "--visualize",
-    type=bool,
-    default=True,
-    help="Determine whether have the visualizer on",
+    "--no-viz",
+    action="store_false",
+    dest="viz",
+    help="Turn off the visualizer",
 )
 args = parser.parse_args()
 
 file = args.file + ".csv"
 time_stop = args.time_stop
-viz = args.visualize
+viz = args.viz
 
 print("Saving to", file)
 
@@ -49,11 +48,11 @@ while True:
 print("Stream read, starting")
 
 # Plotting Setup ##########
-if viz:
-    window = 100
-    data = deque([values] * window, maxlen=window)
-    offsets = np.array(values) - 10000 * np.arange(data_points)
 
+window = 100
+data = deque([values] * window, maxlen=window)
+offsets = np.array(values) - 10000 * np.arange(data_points)
+if viz:
     plt.ion()
     fig, ax = plt.subplots()
     channels = ax.plot(np.array(data) - offsets)
@@ -110,9 +109,19 @@ with open(file, "w") as f:
         if not chunk:
             continue
         buffer += chunk
+            
         while "\n" in buffer:
+            stats = monitor.get_stats()
+            if stats["overflows"] > monitor.max_buffer:
+                raise BufferOverflowError(
+                    "!!! Buffer Overflows Detected !!! Lower sample rate or increase baud"
+                )
+            if viz:
+                ax.set_title(
+                    f"Live Viewer | Buffer: {stats['buffer_usage']} | Overflows: {stats['overflows']}"
+                )
             line, buffer = buffer.split("\n", 1)
-            print(line)
+            print("Buffer:", stats["buffer_usage"], "| Data:", line)
             line = line.strip()
             if not line:
                 continue
@@ -141,16 +150,7 @@ with open(file, "w") as f:
                     ax.autoscale_view()
                     plt.pause(0.01)
 
-                stats = monitor.get_stats()
-                if stats["overflows"] > 0:
-                    raise BufferOverflowError(
-                        "!!! Buffer Overflows Detected !!! Lower sample rate or increase baud"
-                    )
 
-                if viz:
-                    ax.set_title(
-                        f"Live Viewer | Buffer: {stats['buffer_usage']} | Overflows: {stats['overflows']}"
-                    )
 
             except Exception as e:
                 print(f"Error processing line: {e}")

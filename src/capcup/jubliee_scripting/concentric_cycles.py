@@ -166,13 +166,17 @@ def actuate_absolute(jubilee, coordinate):
     jubilee.gcode("M42 P4 S1")
     jubilee.gcode("M400")
     jubilee.move_xyz_absolute(*coordinate)
-
+    jubilee.gcode("M400")
+    jubilee.gcode("M42 P4 S0")
+    jubilee.gcode("M400")
 
 def main():
     suction_cup = cup_configs.NBR_40mm
 
     jubilee = JubileeMotionController("192.168.2.5", debug=True)
-    jubilee.gcode('M950 P4 C"io4.out"')  # set connector 4 for io
+    jubilee.gcode('M950 P4 C"io4.out"')  # set connector 4 for
+    jubilee.gcode("M42 P4 S0")
+
     center_tool(jubilee, suction_cup)
 
     triangles(jubilee, suction_cup)
