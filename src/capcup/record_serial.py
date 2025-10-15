@@ -18,10 +18,19 @@ parser.add_argument(
     default=0,
     help="Time from last actuation to stop recording",
 )
+parser.add_argument(
+    "-v",
+    "--visualize",
+    type=bool,
+    default=True,
+    help="Determine whether have the visualizer on",
+)
 args = parser.parse_args()
 
 file = args.file + ".csv"
 time_stop = args.time_stop
+viz = args.visualize
+
 print("Saving to", file)
 
 # Serial Setup
@@ -40,17 +49,20 @@ while True:
 print("Stream read, starting")
 
 # Plotting Setup ##########
-window = 100
-data = deque([values] * window, maxlen=window)
-offsets = np.array(values) - 10000 * np.arange(data_points)
+if viz:
+    window = 100
+    data = deque([values] * window, maxlen=window)
+    offsets = np.array(values) - 10000 * np.arange(data_points)
 
-plt.ion()
-fig, ax = plt.subplots()
-channels = ax.plot(np.array(data) - offsets)
-ax.legend([f"C{i+1}" for i in range(data_points - 1)] + ["Actuation"], loc="upper left")
-ax.set_xlabel("Samples")
-ax.set_ylabel("Normalized and Offset ADC Counts")
-ax.set_title("Live Viewer")
+    plt.ion()
+    fig, ax = plt.subplots()
+    channels = ax.plot(np.array(data) - offsets)
+    ax.legend(
+        [f"C{i+1}" for i in range(data_points - 1)] + ["Actuation"], loc="upper left"
+    )
+    ax.set_xlabel("Samples")
+    ax.set_ylabel("Normalized and Offset ADC Counts")
+    ax.set_title("Live Viewer")
 ############################
 
 
@@ -118,24 +130,27 @@ with open(file, "w") as f:
                 f.write(str(time.time()) + " " + line + "\n")
                 f.flush()
 
-                for idx, (ch, datum, offset) in enumerate(
-                    zip(channels, zip(*data), offsets)
-                ):
-                    scale = 10000 if idx == data_points - 1 else 1
-                    ch.set_ydata(np.array(datum) * scale - offset)
-                    ch.set_xdata(range(len(datum)))
-                ax.relim()
-                ax.autoscale_view()
-                plt.pause(0.01)
+                if viz:
+                    for idx, (ch, datum, offset) in enumerate(
+                        zip(channels, zip(*data), offsets)
+                    ):
+                        scale = 10000 if idx == data_points - 1 else 1
+                        ch.set_ydata(np.array(datum) * scale - offset)
+                        ch.set_xdata(range(len(datum)))
+                    ax.relim()
+                    ax.autoscale_view()
+                    plt.pause(0.01)
 
                 stats = monitor.get_stats()
                 if stats["overflows"] > 0:
                     raise BufferOverflowError(
                         "!!! Buffer Overflows Detected !!! Lower sample rate or increase baud"
                     )
-                ax.set_title(
-                    f"Live Viewer | Buffer: {stats['buffer_usage']} | Overflows: {stats['overflows']}"
-                )
+
+                if viz:
+                    ax.set_title(
+                        f"Live Viewer | Buffer: {stats['buffer_usage']} | Overflows: {stats['overflows']}"
+                    )
 
             except Exception as e:
                 print(f"Error processing line: {e}")
