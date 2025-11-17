@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Arc
 from matplotlib.widgets import Button
 import numpy as np
+import torch
+from torch import nn
 
 # Parse args
 parser = argparse.ArgumentParser()
@@ -72,6 +74,7 @@ if viz:
     ax.set_ylabel("Normalized and Offset ADC Counts")
     ax.set_title("Live Viewer")
 
+
 zeros = None
 scale = 100000
 if viz2:
@@ -93,8 +96,8 @@ if viz2:
                 1,
                 1,
                 angle=0,
-                theta1=idx * 45 + 90,
-                theta2=idx * 45 + 45 + 90,
+                theta1=idx * 45 + 90 + 2,
+                theta2=idx * 45 + 45 + 90 - 2,
                 lw=15,
             )
         )
@@ -120,6 +123,58 @@ if viz2:
     button.on_clicked(on_button_click)
 
 ############################
+
+
+### Inference Setup
+class LSTMCorrection(nn.Module):
+    def __init__(
+        self,
+        input_dim=8,
+        hidden_dim=64,
+        num_layers=2,
+        output_dim=2,
+        bidirectional=False,
+        dropout=0,
+    ):
+        super().__init__()
+        self.hidden_dim = hidden_dim
+        self.num_layers = num_layers
+        self.bidirectional = bidirectional
+        self.num_directions = 2 if bidirectional else 1
+
+        self.lstm = nn.LSTM(
+            input_size=input_dim,
+            hidden_size=hidden_dim,
+            num_layers=num_layers,
+            batch_first=True,
+            dropout=dropout if num_layers > 1 else 0,
+            bidirectional=bidirectional,
+        )
+        self.fc = nn.Linear(hidden_dim * self.num_directions, output_dim)
+
+    def forward(self, x, hidden=None):
+        out, hidden = self.lstm(x, hidden)
+        out = self.fc(out)
+        return out, hidden
+
+
+device = (
+    torch.accelerator.current_accelerator().type
+    if torch.accelerator.is_available()
+    else "cpu"
+)
+print(f"Using {device} device")
+model = LSTMCorrection(num_layers=4)
+model.load_state_dict(torch.load("lstm_model.pt", map_location=device))
+model.eval()
+num_layers = 4
+hidden_dim = 64
+h = torch.zeros(num_layers, 1, hidden_dim)
+c = torch.zeros(num_layers, 1, hidden_dim)
+hidden = (h, c)
+x = torch.tensor(values[:-1], dtype=torch.float32).unsqueeze(0).unsqueeze(0)
+pred, hidden = model(x, hidden)
+#####
 
 
 class BufferMonitor:
@@ -157,6 +212,7 @@ class BufferOverflowError(IOError):
 monitor = BufferMonitor(ser)
 buffer = ""
 last_actuation = time.time()
+last_val = None
 with open(file, "w") as f:
     while True:
         if (time_stop != 0) and (time.time() - last_actuation > time_stop):
@@ -196,6 +252,12 @@ with open(file, "w") as f:
                 f.write(str(time.time()) + " " + line + "\n")
                 f.flush()
 
+                if zeros is None:
+                    zeros = np.array(values[:-1])
+                norm_caps = np.array(values[:-1]) - zeros
+                if last_val is None:
+                    last_val = norm_caps
+
                 if viz:
                     for idx, (ch, datum, offset) in enumerate(
                         zip(channels, zip(*data), offsets)
@@ -207,13 +269,23 @@ with open(file, "w") as f:
                     ax.autoscale_view()
                     plt.pause(0.01)
                 if viz2:
-                    if zeros is None:
-                        zeros = np.array(values[:-1])
-                    colors = cmap(norm((values[:-1] - zeros) / scale))[::-1]
+                    alpha = 0.01
+                    lp_val = last_val * (1 - alpha) + norm_caps * alpha
+
+                    colors = cmap(norm((norm_caps) / scale))[::-1]
                     for arc, color in zip(arcs, colors):
                         arc.set_color(color)
                     fig2.canvas.draw_idle()
                     plt.pause(0.01)
+
+                with torch.no_grad():
+                    x = (
+                        torch.tensor(norm_caps / 10000, dtype=torch.float32)
+                        .unsqueeze(0)
+                        .unsqueeze(0)
+                    )
+                    pred, hidden = model(x, hidden)
+                    # print(pred)
 
             except Exception as e:
                 print(f"Error processing line: {e}")
