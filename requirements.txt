@@ -8,3 +8,6 @@ pytest
 ruptures
 scipy
 pandas
+pyserial
+torch
+trimesh

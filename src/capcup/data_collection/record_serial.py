@@ -165,15 +165,15 @@ device = (
 )
 print(f"Using {device} device")
 model = LSTMCorrection(num_layers=4)
-model.load_state_dict(torch.load("lstm_model.pt", map_location=device))
-model.eval()
+# model.load_state_dict(torch.load("lstm_model.pt", map_location=device))
+# model.eval()
 num_layers = 4
 hidden_dim = 64
 h = torch.zeros(num_layers, 1, hidden_dim)
 c = torch.zeros(num_layers, 1, hidden_dim)
 hidden = (h, c)
 x = torch.tensor(values[:-1], dtype=torch.float32).unsqueeze(0).unsqueeze(0)
-pred, hidden = model(x, hidden)
+# pred, hidden = model(x, hidden)
 #####
 
 
@@ -284,7 +284,7 @@ with open(file, "w") as f:
                         .unsqueeze(0)
                         .unsqueeze(0)
                     )
-                    pred, hidden = model(x, hidden)
+                    # pred, hidden = model(x, hidden)
                     # print(pred)
 
             except Exception as e:

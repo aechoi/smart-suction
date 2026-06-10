@@ -8,7 +8,7 @@ or you can just wait a bit.
 import os
 import pytest
 
-import capcup.download_drive_data as down
+import capcup.data_formatting.download_drive_data as down
 
 
 def test_download_file():

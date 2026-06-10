@@ -2,7 +2,7 @@
 
 import os
 
-import capcup.eval_data_formatter as edf
+import capcup.data_formatting.eval_data_formatter as edf
 
 
 def test_EvalBoardData():

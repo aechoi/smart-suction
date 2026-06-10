@@ -4,7 +4,7 @@ import matplotlib.patches as pch
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from offset_generator import Box, SuctionCup
+from capcup.jubliee_scripting.offset_generator import Box, SuctionCup
 
 
 def cup_centric(labeled_data: pd.DataFrame, box: Box, cup: SuctionCup):
