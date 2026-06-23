@@ -1,0 +1,1853 @@
+(kicad_pcb 
+  (version 20171130) 
+  (host pcbnew "(5.1.9)-1") 
+  (general 
+    (thickness 1.6) 
+    (drawings 88) 
+    (tracks 64) 
+    (zones 0) 
+    (modules 13) 
+    (nets 11)) 
+  (page A4) 
+  (layers 
+    (0 F.Cu power) 
+    (31 B.Cu signal) 
+    (32 B.Adhes user) 
+    (33 F.Adhes user) 
+    (34 B.Paste user) 
+    (35 F.Paste user) 
+    (36 B.SilkS user) 
+    (37 F.SilkS user) 
+    (38 B.Mask user) 
+    (39 F.Mask user) 
+    (40 Dwgs.User user) 
+    (41 Cmts.User user) 
+    (42 Eco1.User user) 
+    (43 Eco2.User user) 
+    (44 Edge.Cuts user) 
+    (45 Margin user) 
+    (46 B.CrtYd user) 
+    (47 F.CrtYd user) 
+    (48 B.Fab user) 
+    (49 F.Fab user)) 
+  (setup 
+    (last_trace_width 0.25) 
+    (trace_clearance 0.2) 
+    (zone_clearance 0) 
+    (zone_45_only no) 
+    (trace_min 0.2) 
+    (via_size 0.8) 
+    (via_drill 0.4) 
+    (via_min_size 0.4) 
+    (via_min_drill 0.3) 
+    (uvia_size 0.3) 
+    (uvia_drill 0.1) 
+    (uvias_allowed no) 
+    (uvia_min_size 0.2) 
+    (uvia_min_drill 0.1) 
+    (edge_width 0.05) 
+    (segment_width 0.2) 
+    (pcb_text_width 0.3) 
+    (pcb_text_size 1.5 1.5) 
+    (mod_edge_width 0.12) 
+    (mod_text_size 1 1) 
+    (mod_text_width 0.15) 
+    (pad_size 1.8 1) 
+    (pad_drill 0) 
+    (pad_to_mask_clearance 0) 
+    (aux_axis_origin 0 0) 
+    (visible_elements 7FFFFFFF) 
+    (pcbplotparams 
+      (layerselection 0x010fc_ffffffff) 
+      (usegerberextensions true) 
+      (usegerberattributes true) 
+      (usegerberadvancedattributes true) 
+      (creategerberjobfile true) 
+      (excludeedgelayer true) 
+      (linewidth 0.1) 
+      (plotframeref false) 
+      (viasonmask false) 
+      (mode 1) 
+      (useauxorigin false) 
+      (hpglpennumber 1) 
+      (hpglpenspeed 20) 
+      (hpglpendiameter 15) 
+      (psnegative false) 
+      (psa4output false) 
+      (plotreference true) 
+      (plotvalue true) 
+      (plotinvisibletext false) 
+      (padsonsilk false) 
+      (subtractmaskfromsilk false) 
+      (outputformat 1) 
+      (mirror false) 
+      (drillshape 0) 
+      (scaleselection 1) 
+      (outputdirectory "gerbers/"))) 
+  (net 0 "") 
+  (net 1 "Net-(J1-Pad1)") 
+  (net 2 "Net-(J2-Pad1)") 
+  (net 3 "Net-(J3-Pad1)") 
+  (net 4 "Net-(J4-Pad1)") 
+  (net 5 "Net-(J5-Pad1)") 
+  (net 6 "Net-(J6-Pad1)") 
+  (net 7 "Net-(J7-Pad1)") 
+  (net 8 "Net-(J8-Pad1)") 
+  (net 9 GND) 
+  (net 10 "Net-(J9-Pad1)") 
+  (net_class Default "This is the default net class." 
+    (clearance 0.2) 
+    (trace_width 0.25) 
+    (via_dia 0.8) 
+    (via_drill 0.4) 
+    (uvia_dia 0.3) 
+    (uvia_drill 0.1) 
+    (add_net GND) 
+    (add_net "Net-(J1-Pad1)") 
+    (add_net "Net-(J2-Pad1)") 
+    (add_net "Net-(J3-Pad1)") 
+    (add_net "Net-(J4-Pad1)") 
+    (add_net "Net-(J5-Pad1)") 
+    (add_net "Net-(J6-Pad1)") 
+    (add_net "Net-(J7-Pad1)") 
+    (add_net "Net-(J8-Pad1)") 
+    (add_net "Net-(J9-Pad1)")) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973E3) 
+    (at 109.093369 83.65361300000001 22.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J9 
+      (at -3.902396 -0.113879 22.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 22.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 22.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 22.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 10 "Net-(J9-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973D9) 
+    (at 109.0676 68.8086 337.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J8 
+      (at -3.902396 -0.113879 157.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 157.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 337.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 337.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 8 "Net-(J8-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973CF) 
+    (at 119.546387 58.293369 292.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J7 
+      (at -3.902396 -0.113879 112.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 112.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 292.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 292.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 7 "Net-(J7-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973C5) 
+    (at 134.3914 58.2676 247.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J6 
+      (at -3.902396 -0.113879 67.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 67.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 247.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 247.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 6 "Net-(J6-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973BB) 
+    (at 144.906631 68.746387 202.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J5 
+      (at -3.902396 -0.113879 22.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 22.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 202.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 202.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 5 "Net-(J5-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973B1) 
+    (at 144.9324 83.59139999999999 157.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J4 
+      (at -3.902396 -0.113879 157.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 157.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 157.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 157.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 4 "Net-(J4-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680973A7) 
+    (at 134.453613 94.10663099999999 112.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J3 
+      (at -3.902396 -0.113879 112.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 112.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 112.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 112.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 3 "Net-(J3-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 680310B8) 
+    (at 127.0508 54.923 90) 
+    (attr smd) 
+    (fp_text reference J1 
+      (at -5.2 -2.9 90) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 90) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 90) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 90) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 1 "Net-(J1-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module Connector_Huber:Huber_82_MMCX-50-0-8 
+    (layer F.Cu) 
+    (tedit 680922A9) 
+    (tstamp 68030F73) 
+    (at 119.6086 94.1324 67.5) 
+    (path /68034982) 
+    (attr smd) 
+    (fp_text reference J2 
+      (at -3.902396 -0.113879 67.5) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value Conn_Coaxial 
+      (at 0 -4.6 67.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (pad 2 smd custom 
+      (at -2.1 0 67.5) 
+      (size 0.2 5.5) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 9 GND) 
+      (zone_connect 0) 
+      (options 
+        (clearance outline) 
+        (anchor rect)) 
+      (primitives 
+        (gr_poly 
+          (pts 
+            (xy -0.1 -2.75) 
+            (xy 4.6 -2.75) 
+            (xy 4.6 -1.15) 
+            (xy 4.1 -1.15) 
+            (xy 4.1 -2.1) 
+            (xy 0.4 -2.1) 
+            (xy 0.4 2.1) 
+            (xy 4.1 2.1) 
+            (xy 4.1 1.15) 
+            (xy 4.6 1.15) 
+            (xy 4.6 2.75) 
+            (xy -0.1 2.75)) 
+          (width 0)))) 
+    (pad 1 smd rect 
+      (at 3.1 0 67.5) 
+      (size 1.8 1) 
+      (layers F.Cu F.Paste F.Mask) 
+      (net 2 "Net-(J2-Pad1)")) 
+    (model C:/Users/Alex/Documents/_projTech/036_suction/steps/3D-outline_00012947_C_step.stp 
+      (at 
+        (xyz 0 0 0)) 
+      (scale 
+        (xyz 1 1 1)) 
+      (rotate 
+        (xyz 0 90 180)))) 
+  (module MountingHole:MountingHole_4.3mm_M4_ISO14580_Pad 
+    (layer F.Cu) 
+    (tedit 56D1B4CB) 
+    (tstamp 680304F0) 
+    (at 148.844 98.044) 
+    (descr "Mounting Hole 4.3mm, M4, ISO14580") 
+    (tags "mounting hole 4.3mm m4 iso14580") 
+    (attr virtual) 
+    (fp_text reference REF** 
+      (at 0 -4.5) 
+      (layer Dwgs.User) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value MountingHole_4.3mm_M4_ISO14580_Pad 
+      (at 0 4.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text user %R 
+      (at 0.3 0) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.5 0) 
+      (layer Cmts.User) 
+      (width 0.15)) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.75 0) 
+      (layer F.CrtYd) 
+      (width 0.05)) 
+    (pad 1 thru_hole circle 
+      (at 0 0) 
+      (size 7 7) 
+      (drill 4.3) 
+      (layers *.Cu *.Mask) 
+      (net 9 GND))) 
+  (module MountingHole:MountingHole_4.3mm_M4_ISO14580_Pad 
+    (layer F.Cu) 
+    (tedit 56D1B4CB) 
+    (tstamp 680304F0) 
+    (at 105.156 98.044) 
+    (descr "Mounting Hole 4.3mm, M4, ISO14580") 
+    (tags "mounting hole 4.3mm m4 iso14580") 
+    (attr virtual) 
+    (fp_text reference SMTSO-M3-3ET 
+      (at 2.794 -5.334) 
+      (layer F.SilkS) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value MountingHole_4.3mm_M4_ISO14580_Pad 
+      (at 0 4.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text user %R 
+      (at 0.3 0) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.5 0) 
+      (layer Cmts.User) 
+      (width 0.15)) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.75 0) 
+      (layer F.CrtYd) 
+      (width 0.05)) 
+    (pad 1 thru_hole circle 
+      (at 0 0) 
+      (size 7 7) 
+      (drill 4.3) 
+      (layers *.Cu *.Mask) 
+      (net 9 GND))) 
+  (module MountingHole:MountingHole_4.3mm_M4_ISO14580_Pad 
+    (layer F.Cu) 
+    (tedit 56D1B4CB) 
+    (tstamp 680304F0) 
+    (at 148.844 54.356) 
+    (descr "Mounting Hole 4.3mm, M4, ISO14580") 
+    (tags "mounting hole 4.3mm m4 iso14580") 
+    (attr virtual) 
+    (fp_text reference REF** 
+      (at 0 -4.5) 
+      (layer Dwgs.User) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value MountingHole_4.3mm_M4_ISO14580_Pad 
+      (at 0 4.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text user %R 
+      (at 0.3 0) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.5 0) 
+      (layer Cmts.User) 
+      (width 0.15)) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.75 0) 
+      (layer F.CrtYd) 
+      (width 0.05)) 
+    (pad 1 thru_hole circle 
+      (at 0 0) 
+      (size 7 7) 
+      (drill 4.3) 
+      (layers *.Cu *.Mask) 
+      (net 9 GND))) 
+  (module MountingHole:MountingHole_4.3mm_M4_ISO14580_Pad 
+    (layer F.Cu) 
+    (tedit 56D1B4CB) 
+    (tstamp 68030425) 
+    (at 105.156 54.356) 
+    (descr "Mounting Hole 4.3mm, M4, ISO14580") 
+    (tags "mounting hole 4.3mm m4 iso14580") 
+    (attr virtual) 
+    (fp_text reference REF** 
+      (at 0 -4.826) 
+      (layer Dwgs.User) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text value MountingHole_4.3mm_M4_ISO14580_Pad 
+      (at 0 4.5) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_text user %R 
+      (at 0.3 0) 
+      (layer F.Fab) 
+      (effects 
+        (font 
+          (size 1 1) 
+          (thickness 0.15)))) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.5 0) 
+      (layer Cmts.User) 
+      (width 0.15)) 
+    (fp_circle 
+      (center 0 0) 
+      (end 3.75 0) 
+      (layer F.CrtYd) 
+      (width 0.05)) 
+    (pad 1 thru_hole circle 
+      (at 0 0) 
+      (size 7 7) 
+      (drill 4.3) 
+      (layers *.Cu *.Mask) 
+      (net 9 GND))) 
+  (gr_text 82_MMCX-50-0-8/111_OM 
+    (at 103.632 74.93000000000001 90) 
+    (layer F.SilkS) 
+    (effects 
+      (font 
+        (size 1 1) 
+        (thickness 0.15)))) 
+  (gr_text "MMCX v4 Plate" 
+    (at 127 100.33) 
+    (layer F.SilkS) 
+    (effects 
+      (font 
+        (size 1 1) 
+        (thickness 0.15)))) 
+  (gr_line 
+    (start 106.551892 76.499999) 
+    (end 108.452425 76.499999) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 680973A0)) 
+  (gr_line 
+    (start 112.328873 61.953136) 
+    (end 113.672753 63.297016) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809739E)) 
+  (gr_line 
+    (start 126.700001 55.751892) 
+    (end 126.700001 57.652425) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809739C)) 
+  (gr_line 
+    (start 141.246864 61.528873) 
+    (end 139.902984 62.872753) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809739A)) 
+  (gr_line 
+    (start 147.448108 75.900001) 
+    (end 145.547575 75.900001) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097398)) 
+  (gr_line 
+    (start 141.671127 90.44686400000001) 
+    (end 140.327247 89.10298400000001) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097396)) 
+  (gr_line 
+    (start 127.299999 96.64810799999999) 
+    (end 127.299999 94.747575) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097394)) 
+  (gr_line 
+    (start 112.328874 90.446862) 
+    (end 113.672754 89.102982) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097391)) 
+  (gr_line 
+    (start 106.551894 75.90000000000001) 
+    (end 108.452427 75.90000000000001) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809738F)) 
+  (gr_line 
+    (start 112.753138 61.528874) 
+    (end 114.097018 62.872754) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809738D)) 
+  (gr_line 
+    (start 127.3 55.751894) 
+    (end 127.3 57.652427) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809738B)) 
+  (gr_line 
+    (start 141.671126 61.953138) 
+    (end 140.327246 63.297018) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097389)) 
+  (gr_line 
+    (start 147.448106 76.5) 
+    (end 145.547573 76.5) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097387)) 
+  (gr_line 
+    (start 141.246862 90.871126) 
+    (end 139.902982 89.52724600000001) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097385)) 
+  (gr_arc 
+    (start 126.693703 76.32687199999999) 
+    (end 106.551893 76.499999) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097382)) 
+  (gr_arc 
+    (start 126.693703 76.073127) 
+    (end 112.328873 61.953136) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097380)) 
+  (gr_arc 
+    (start 126.873128 75.893703) 
+    (end 126.700001 55.751893) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809737E)) 
+  (gr_arc 
+    (start 127.126873 75.893703) 
+    (end 141.246864 61.528873) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809737C)) 
+  (gr_arc 
+    (start 127.306297 76.073128) 
+    (end 147.448107 75.900001) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809737A)) 
+  (gr_arc 
+    (start 127.306297 76.32687300000001) 
+    (end 141.671127 90.44686400000001) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097378)) 
+  (gr_arc 
+    (start 127.126872 76.506297) 
+    (end 127.299999 96.648107) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097376)) 
+  (gr_poly 
+    (pts 
+      (xy 108.493488 77.572183) 
+      (xy 108.685665 79.237122) 
+      (xy 109.175987 81.361851) 
+      (xy 109.923145 83.488376) 
+      (xy 111.14446 85.884308) 
+      (xy 112.241847 87.441484) 
+      (xy 113.658931 89.10283200000001) 
+      (xy 112.315485 90.435502) 
+      (xy 111.140868 89.135161) 
+      (xy 109.788441 87.290616) 
+      (xy 108.825757 85.66698599999999) 
+      (xy 107.688857 83.04295500000001) 
+      (xy 107.110529 81.078075) 
+      (xy 106.645351 78.34268899999999) 
+      (xy 106.557345 76.505329) 
+      (xy 108.444995 76.507125)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 68097373)) 
+  (gr_poly 
+    (pts 
+      (xy 112.94364 64.0842) 
+      (xy 111.90224 65.39738) 
+      (xy 110.74654 67.2465) 
+      (xy 109.77118 69.27849999999999) 
+      (xy 108.9406 71.83628) 
+      (xy 108.61548 73.71334) 
+      (xy 108.44276 75.89012) 
+      (xy 106.55046 75.88249999999999) 
+      (xy 106.63936 74.13244) 
+      (xy 106.98734 71.87184000000001) 
+      (xy 107.4547 70.04304) 
+      (xy 108.50626 67.38366000000001) 
+      (xy 109.4867 65.58534) 
+      (xy 111.09198 63.3222) 
+      (xy 112.32896 61.96076) 
+      (xy 113.66246 63.2968)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 68097371)) 
+  (gr_poly 
+    (pts 
+      (xy 125.627817 57.693488) 
+      (xy 123.962878 57.885665) 
+      (xy 121.838149 58.375987) 
+      (xy 119.711624 59.123145) 
+      (xy 117.315692 60.34446) 
+      (xy 115.758516 61.441847) 
+      (xy 114.097168 62.858931) 
+      (xy 112.764498 61.515485) 
+      (xy 114.064839 60.340868) 
+      (xy 115.909384 58.988441) 
+      (xy 117.533014 58.025757) 
+      (xy 120.157045 56.888857) 
+      (xy 122.121925 56.310529) 
+      (xy 124.857311 55.845351) 
+      (xy 126.694671 55.757345) 
+      (xy 126.692875 57.644995)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 6809736F)) 
+  (gr_poly 
+    (pts 
+      (xy 139.1158 62.14364) 
+      (xy 137.80262 61.10224) 
+      (xy 135.9535 59.94654) 
+      (xy 133.9215 58.97118) 
+      (xy 131.36372 58.1406) 
+      (xy 129.48666 57.81548) 
+      (xy 127.30988 57.64276) 
+      (xy 127.3175 55.75046) 
+      (xy 129.06756 55.83936) 
+      (xy 131.32816 56.18734) 
+      (xy 133.15696 56.6547) 
+      (xy 135.81634 57.70626) 
+      (xy 137.61466 58.6867) 
+      (xy 139.8778 60.29198) 
+      (xy 141.23924 61.52896) 
+      (xy 139.9032 62.86246)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 6809736D)) 
+  (gr_poly 
+    (pts 
+      (xy 145.506512 74.827817) 
+      (xy 145.314335 73.16287800000001) 
+      (xy 144.824013 71.038149) 
+      (xy 144.076855 68.911624) 
+      (xy 142.85554 66.515692) 
+      (xy 141.758153 64.958516) 
+      (xy 140.341069 63.297168) 
+      (xy 141.684515 61.964498) 
+      (xy 142.859132 63.264839) 
+      (xy 144.211559 65.10938400000001) 
+      (xy 145.174243 66.733014) 
+      (xy 146.311143 69.357045) 
+      (xy 146.889471 71.32192499999999) 
+      (xy 147.354649 74.057311) 
+      (xy 147.442655 75.894671) 
+      (xy 145.555005 75.892875)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 6809736B)) 
+  (gr_poly 
+    (pts 
+      (xy 141.05636 88.3158) 
+      (xy 142.09776 87.00261999999999) 
+      (xy 143.25346 85.15349999999999) 
+      (xy 144.22882 83.1215) 
+      (xy 145.0594 80.56372) 
+      (xy 145.38452 78.68666) 
+      (xy 145.55724 76.50988) 
+      (xy 147.44954 76.5175) 
+      (xy 147.36064 78.26756) 
+      (xy 147.01266 80.52816) 
+      (xy 146.5453 82.35696) 
+      (xy 145.49374 85.01634) 
+      (xy 144.5133 86.81466) 
+      (xy 142.90802 89.0778) 
+      (xy 141.67104 90.43924) 
+      (xy 140.33754 89.1032)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 68097369)) 
+  (gr_poly 
+    (pts 
+      (xy 128.372183 94.706512) 
+      (xy 130.037122 94.514335) 
+      (xy 132.161851 94.024013) 
+      (xy 134.288376 93.276855) 
+      (xy 136.684308 92.05553999999999) 
+      (xy 138.241484 90.958153) 
+      (xy 139.902832 89.54106899999999) 
+      (xy 141.235502 90.88451499999999) 
+      (xy 139.935161 92.05913200000001) 
+      (xy 138.090616 93.411559) 
+      (xy 136.466986 94.37424300000001) 
+      (xy 133.842955 95.511143) 
+      (xy 131.878075 96.089471) 
+      (xy 129.142689 96.554649) 
+      (xy 127.305329 96.642655) 
+      (xy 127.307125 94.755005)) 
+    (layer B.Cu) 
+    (width 0) 
+    (tstamp 68097367)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 108.452426 76.499999) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097364)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 113.672753 63.297016) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097362)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 126.700001 57.652426) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097360)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 139.902984 62.872753) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809735E)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 145.547574 75.900001) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809735C)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 140.327247 89.10298400000001) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 6809735A)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 127.299999 94.747574) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1) 
+    (tstamp 68097358)) 
+  (gr_poly 
+    (pts 
+      (xy 114.8842 90.25636) 
+      (xy 116.19738 91.29776) 
+      (xy 118.0465 92.45346000000001) 
+      (xy 120.0785 93.42882) 
+      (xy 122.63628 94.2594) 
+      (xy 124.51334 94.58452) 
+      (xy 126.69012 94.75724) 
+      (xy 126.6825 96.64954) 
+      (xy 124.93244 96.56064000000001) 
+      (xy 122.67184 96.21266) 
+      (xy 120.84304 95.7453) 
+      (xy 118.18366 94.69374000000001) 
+      (xy 116.38534 93.7133) 
+      (xy 114.1222 92.10802) 
+      (xy 112.76076 90.87103999999999) 
+      (xy 114.0968 89.53754000000001)) 
+    (layer B.Cu) 
+    (width 0)) 
+  (gr_circle 
+    (center 127 76.2) 
+    (end 148 76.2) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_circle 
+    (center 127 76.2) 
+    (end 139 76.2) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 127.3 55.751893) 
+    (end 127.3 57.652426) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 139.902983 62.872752) 
+    (angle -43.14668644) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 141.246863 61.528872) 
+    (end 139.902983 62.872752) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127.126872 75.893702) 
+    (end 141.246863 61.528872) 
+    (angle -44.01505996) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 141.671127 61.953136) 
+    (end 140.327247 63.297016) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 145.547573 75.89999899999999) 
+    (angle -43.14668644) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 147.448106 75.89999899999999) 
+    (end 145.547573 75.89999899999999) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127.306297 76.073127) 
+    (end 147.448106 75.90000000000001) 
+    (angle -44.01505996) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 147.448106 76.5) 
+    (end 145.547573 76.5) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 140.327247 89.10298299999999) 
+    (angle -43.14668644) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 141.671127 90.44686299999999) 
+    (end 140.327247 89.10298299999999) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127.306297 76.32687199999999) 
+    (end 141.671127 90.44686299999999) 
+    (angle -44.01505996) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 141.246863 90.871127) 
+    (end 139.902983 89.527247) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 127.3 94.747573) 
+    (angle -43.1) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 127.3 96.648106) 
+    (end 127.3 94.747573) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127.126872 76.506297) 
+    (end 127.3 96.648106) 
+    (angle -44) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 126.7 96.648106) 
+    (end 126.7 94.747573) 
+    (layer B.Cu) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 114.097016 89.527247) 
+    (angle -43.1) 
+    (layer B.Cu) 
+    (width 0.1)) 
+  (gr_line 
+    (start 112.753136 90.871127) 
+    (end 114.097016 89.527247) 
+    (layer B.Cu) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 126.873127 76.506297) 
+    (end 112.753136 90.871127) 
+    (angle -44) 
+    (layer B.Cu) 
+    (width 0.1)) 
+  (gr_line 
+    (start 112.328872 90.44686299999999) 
+    (end 113.672752 89.10298299999999) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 108.452426 76.5) 
+    (angle -43.14668644) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 106.551893 76.5) 
+    (end 108.452426 76.5) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 126.693702 76.32687199999999) 
+    (end 106.551893 76.5) 
+    (angle -44.01505996) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 106.551893 75.90000000000001) 
+    (end 108.452426 75.90000000000001) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 113.672752 63.297016) 
+    (angle -43.14668644) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 112.328872 61.953136) 
+    (end 113.672752 63.297016) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 126.693702 76.073127) 
+    (end 112.328872 61.953136) 
+    (angle -44.01505996) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 112.753136 61.528872) 
+    (end 114.097016 62.872752) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 127 76.2) 
+    (end 126.699999 57.652426) 
+    (angle -43.14668644) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_line 
+    (start 126.699999 55.751893) 
+    (end 126.699999 57.652426) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_arc 
+    (start 126.873127 75.893702) 
+    (end 126.699999 55.751893) 
+    (angle -44.01505996) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_circle 
+    (center 127 76.2) 
+    (end 139 76.2) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_circle 
+    (center 127 76.2) 
+    (end 139 76.2) 
+    (layer Dwgs.User) 
+    (width 0.1)) 
+  (gr_circle 
+    (center 127 76.2) 
+    (end 139 76.2) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_circle 
+    (center 127 76.2) 
+    (end 148.25 76.2) 
+    (layer B.Cu) 
+    (width 0.5)) 
+  (gr_circle 
+    (center 148.891186 98.09118599999999) 
+    (end 151.041186 98.09118599999999) 
+    (layer Dwgs.User) 
+    (width 0.2)) 
+  (gr_arc 
+    (start 105.108814 54.308814) 
+    (end 105.108814 49.775001) 
+    (angle -90) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_line 
+    (start 148.891186 49.775) 
+    (end 105.108814 49.775) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_arc 
+    (start 148.891186 54.308814) 
+    (end 153.424999 54.308814) 
+    (angle -90) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_line 
+    (start 153.425 54.308814) 
+    (end 153.425 98.09118599999999) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_arc 
+    (start 105.108814 98.09118599999999) 
+    (end 100.575 98.09118599999999) 
+    (angle -90) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_circle 
+    (center 105.108814 98.09118599999999) 
+    (end 107.258814 98.09118599999999) 
+    (layer Dwgs.User) 
+    (width 0.2)) 
+  (gr_circle 
+    (center 105.108814 54.308814) 
+    (end 107.258814 54.308814) 
+    (layer Dwgs.User) 
+    (width 0.2)) 
+  (gr_line 
+    (start 148.891186 102.625) 
+    (end 105.108814 102.625) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_line 
+    (start 100.575 54.308814) 
+    (end 100.575 98.09118599999999) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (gr_circle 
+    (center 148.891186 54.308814) 
+    (end 151.041186 54.308814) 
+    (layer Dwgs.User) 
+    (width 0.2)) 
+  (gr_arc 
+    (start 148.891186 98.09118599999999) 
+    (end 148.891186 102.624999) 
+    (angle -90) 
+    (layer Edge.Cuts) 
+    (width 0.2)) 
+  (via 
+    (at 127.0508 54.9402) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 1)) 
+  (segment 
+    (start 127.0508 54.9402) 
+    (end 127.0508 52.6644) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 1)) 
+  (via 
+    (at 119.634 94.23399999999999) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 2)) 
+  (segment 
+    (start 119.634 92.964) 
+    (end 119.634 94.23399999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 2)) 
+  (segment 
+    (start 120.794919 91.80308100000001) 
+    (end 119.634 92.964) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 2)) 
+  (segment 
+    (start 120.794919 91.268373) 
+    (end 120.794919 91.80308100000001) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 2)) 
+  (via 
+    (at 134.543415 94.160512) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 3) 
+    (tstamp 680973EE)) 
+  (via 
+    (at 145.034 83.566) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 4) 
+    (tstamp 680973F0)) 
+  (via 
+    (at 144.960512 68.65658500000001) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 5) 
+    (tstamp 680973F2)) 
+  (via 
+    (at 134.366 58.166) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 6) 
+    (tstamp 680973F4)) 
+  (via 
+    (at 119.456585 58.239488) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 7) 
+    (tstamp 680973F6)) 
+  (via 
+    (at 108.966 68.834) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 8) 
+    (tstamp 680973F8)) 
+  (via 
+    (at 109.039488 83.743415) 
+    (size 0.8) 
+    (drill 0.4) 
+    (layers F.Cu B.Cu) 
+    (net 10) 
+    (tstamp 680973FA)) 
+  (segment 
+    (start 133.64539 91.620699) 
+    (end 133.64539 93.262486) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 3) 
+    (tstamp 680973FD)) 
+  (segment 
+    (start 142.603081 82.405081) 
+    (end 143.764 83.566) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 4) 
+    (tstamp 680973FF)) 
+  (segment 
+    (start 142.420699 69.55461) 
+    (end 144.062486 69.55461) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 5) 
+    (tstamp 68097401)) 
+  (segment 
+    (start 133.205081 60.596919) 
+    (end 134.366 59.436) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 6) 
+    (tstamp 68097403)) 
+  (segment 
+    (start 120.35461 60.779301) 
+    (end 120.35461 59.137514) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 7) 
+    (tstamp 68097405)) 
+  (segment 
+    (start 111.396919 69.994919) 
+    (end 110.236 68.834) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 8) 
+    (tstamp 68097407)) 
+  (segment 
+    (start 111.579301 82.84538999999999) 
+    (end 109.937514 82.84538999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 10) 
+    (tstamp 68097409)) 
+  (segment 
+    (start 133.64539 93.26248699999999) 
+    (end 134.543416 94.16051299999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 3) 
+    (tstamp 6809740C)) 
+  (segment 
+    (start 143.764 83.566) 
+    (end 145.034 83.566) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 4) 
+    (tstamp 6809740E)) 
+  (segment 
+    (start 144.062487 69.55461) 
+    (end 144.960513 68.656584) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 5) 
+    (tstamp 68097410)) 
+  (segment 
+    (start 134.366 59.436) 
+    (end 134.366 58.166) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 6) 
+    (tstamp 68097412)) 
+  (segment 
+    (start 120.35461 59.137513) 
+    (end 119.456584 58.239487) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 7) 
+    (tstamp 68097414)) 
+  (segment 
+    (start 110.236 68.834) 
+    (end 108.966 68.834) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 8) 
+    (tstamp 68097416)) 
+  (segment 
+    (start 109.937513 82.84538999999999) 
+    (end 109.039487 83.743416) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 10) 
+    (tstamp 68097418)) 
+  (segment 
+    (start 148.844 98.044) 
+    (end 148.844 100.14779) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 54.356) 
+    (end 150.114 54.356) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 84.074) 
+    (end 148.844 68.58) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 119.126 98.044) 
+    (end 134.62 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 68.32599999999999) 
+    (end 105.156 83.81999999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 116.74553 54.356) 
+    (end 118.742752 56.353222) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 54.356) 
+    (end 116.74553 54.356) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 126.381022 56.353222) 
+    (end 127.0508 57.023) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 118.742752 56.353222) 
+    (end 126.381022 56.353222) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 127.746347 56.327453) 
+    (end 127.0508 57.023) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 135.195035 56.327453) 
+    (end 127.746347 56.327453) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 137.166488 54.356) 
+    (end 135.195035 56.327453) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 54.356) 
+    (end 137.166488 54.356) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.841752 67.942752) 
+    (end 148.844 67.94499999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 146.846778 67.942752) 
+    (end 148.841752 67.942752) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 67.94499999999999) 
+    (end 148.844 54.356) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 68.58) 
+    (end 148.844 67.94499999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.809435 84.39503499999999) 
+    (end 148.844 84.42959999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 146.872547 84.39503499999999) 
+    (end 148.809435 84.39503499999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 84.42959999999999) 
+    (end 148.844 84.074) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 148.844 98.044) 
+    (end 148.844 84.42959999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 135.257248 98.041752) 
+    (end 135.255 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 135.257248 96.046778) 
+    (end 135.257248 98.041752) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 135.255 98.044) 
+    (end 148.844 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 134.62 98.044) 
+    (end 135.255 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 118.804965 98.009435) 
+    (end 118.7704 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 118.804965 96.072547) 
+    (end 118.804965 98.009435) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 118.7704 98.044) 
+    (end 119.126 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 98.044) 
+    (end 118.7704 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.204552 84.45724800000001) 
+    (end 105.156 84.50579999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 107.153222 84.45724800000001) 
+    (end 105.204552 84.45724800000001) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 84.50579999999999) 
+    (end 105.156 98.044) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 83.81999999999999) 
+    (end 105.156 84.50579999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.197635 68.004965) 
+    (end 105.156 68.0466) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 107.127453 68.004965) 
+    (end 105.197635 68.004965) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 68.0466) 
+    (end 105.156 68.32599999999999) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)) 
+  (segment 
+    (start 105.156 54.356) 
+    (end 105.156 68.0466) 
+    (width 0.25) 
+    (layer F.Cu) 
+    (net 9)))

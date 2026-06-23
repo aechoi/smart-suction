@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Connector_Huber")(type "KiCad")(uri "/home/alex/Nextcloud/research/suction_cup/board/Connector_Huber.pretty")(options "")(descr ""))
+)

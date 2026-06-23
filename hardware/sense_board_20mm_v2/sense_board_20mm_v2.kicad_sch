@@ -1,0 +1,509 @@
+(kicad_sch 
+  (version 20250114) 
+  (generator "eeschema") 
+  (generator_version "9.0") 
+  (uuid "77d8b71f-e4e8-4284-bc30-b01998247625") 
+  (paper "A4") 
+  (lib_symbols 
+    (symbol "Connector:Conn_01x01_Pin" 
+      (pin_names 
+        (offset 1.016) 
+        (hide yes)) 
+      (exclude_from_sim no) 
+      (in_bom yes) 
+      (on_board yes) 
+      (property "Reference" "J" 
+        (at 0 2.54 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)))) 
+      (property "Value" "Conn_01x01_Pin" 
+        (at 0 -2.54 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)))) 
+      (property "Footprint" "" 
+        (at 0 0 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)) 
+          (hide yes))) 
+      (property "Datasheet" "~" 
+        (at 0 0 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)) 
+          (hide yes))) 
+      (property "Description" "Generic connector, single row, 01x01, script generated" 
+        (at 0 0 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)) 
+          (hide yes))) 
+      (property "ki_locked" "" 
+        (at 0 0 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)))) 
+      (property "ki_keywords" "connector" 
+        (at 0 0 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)) 
+          (hide yes))) 
+      (property "ki_fp_filters" "Connector*:*_1x??_*" 
+        (at 0 0 0) 
+        (effects 
+          (font 
+            (size 1.27 1.27)) 
+          (hide yes))) 
+      (symbol "Conn_01x01_Pin_1_1" 
+        (rectangle 
+          (start 0.8636 0.127) 
+          (end 0 -0.127) 
+          (stroke 
+            (width 0.1524) 
+            (type default)) 
+          (fill 
+            (type outline))) 
+        (polyline 
+          (pts 
+            (xy 1.27 0) 
+            (xy 0.8636 0)) 
+          (stroke 
+            (width 0.1524) 
+            (type default)) 
+          (fill 
+            (type none))) 
+        (pin passive line 
+          (at 5.08 0 180) 
+          (length 3.81) 
+          (name "Pin_1" 
+            (effects 
+              (font 
+                (size 1.27 1.27)))) 
+          (number "1" 
+            (effects 
+              (font 
+                (size 1.27 1.27)))))) 
+      (embedded_fonts no))) 
+  (label "R7" 
+    (at 76.2 76.2 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "0038337d-a447-48d4-848f-fde19bc8a8bb")) 
+  (label "R3" 
+    (at 76.2 50.8 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "2158be43-08fd-45aa-a60c-5ea1641115e8")) 
+  (label "R6" 
+    (at 76.2 69.84999999999999 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "283f1224-d003-458a-a9a7-0ff35d0eb287")) 
+  (label "R1" 
+    (at 76.2 38.1 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "41ee0197-cb66-4cf0-a8c4-92d7539179b8")) 
+  (label "R5" 
+    (at 76.2 63.5 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "874ee1e7-d62e-445a-8b54-fe0b5e627944")) 
+  (label "R8" 
+    (at 76.2 82.55 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "cd698ca7-560a-4178-b269-718313513f61")) 
+  (label "R4" 
+    (at 76.2 57.15 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "ecea6596-cd79-407e-b365-3f3ffcaab1e5")) 
+  (label "R2" 
+    (at 76.2 44.45 0) 
+    (effects 
+      (font 
+        (size 1.27 1.27)) 
+      (justify left bottom)) 
+    (uuid "ef891a61-dd88-4730-b720-5cda8741e7e1")) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 76.2 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "173370fc-c5a6-4fc5-9371-41d6838bc958") 
+    (property "Reference" "J7" 
+      (at 71.755 71.12 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 73.66 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 76.2 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 76.2 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 76.2 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "03be62c1-cbe4-4f15-99c2-1e297c22fe35")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J7") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 82.55 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "1f2e61d3-2aa1-4d77-ac93-67295fcf339f") 
+    (property "Reference" "J8" 
+      (at 71.755 77.47 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 80.01000000000001 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 82.55 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 82.55 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 82.55 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "0ba26ca8-149e-429f-8209-d55eac776e85")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J8") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 63.5 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "2352251f-9409-48fe-afea-4c177ecd1895") 
+    (property "Reference" "J5" 
+      (at 71.755 58.42 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 60.96 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 63.5 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 63.5 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 63.5 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "1f9f3d8d-8f2d-4882-9bd5-bf49c0a8cf29")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J5") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 50.8 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "363be9cb-9708-49bf-bf6e-05ffb68ab176") 
+    (property "Reference" "J3" 
+      (at 71.755 45.72 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 48.26 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 50.8 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 50.8 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 50.8 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "f7b6af1f-3ade-4fd0-8f04-7b8c11008f80")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J3") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 44.45 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "72b94636-7d27-4a7b-85ee-0f18cd8fff8f") 
+    (property "Reference" "J2" 
+      (at 71.755 39.37 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 41.91 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 44.45 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 44.45 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 44.45 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "532e296d-d633-4928-9030-a8e4d2c9be9b")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J2") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 38.1 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "779b0422-36d8-4f2c-b8db-3a0edeab08ad") 
+    (property "Reference" "J1" 
+      (at 71.755 33.02 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 35.56 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 38.1 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 38.1 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 38.1 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "5fecfd06-2447-41a4-ab3e-d68c48748e6e")) 
+    (instances 
+      (project "" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J1") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 69.84999999999999 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "ad848bcd-503e-45e8-b2cd-a9eab47d7886") 
+    (property "Reference" "J6" 
+      (at 71.755 64.77 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 67.31 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 69.84999999999999 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 69.84999999999999 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 69.84999999999999 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "5c250885-1389-49d5-aa5e-2047ba65bca8")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J6") 
+          (unit 1))))) 
+  (symbol 
+    (lib_id "Connector:Conn_01x01_Pin") 
+    (at 71.12 57.15 0) 
+    (unit 1) 
+    (exclude_from_sim no) 
+    (in_bom yes) 
+    (on_board yes) 
+    (dnp no) 
+    (fields_autoplaced yes) 
+    (uuid "cdaa8463-667f-47fc-8ed2-106c1da20135") 
+    (property "Reference" "J4" 
+      (at 71.755 52.07 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Value" "Conn_01x01_Pin" 
+      (at 71.755 54.61 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)))) 
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" 
+      (at 71.12 57.15 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Datasheet" "~" 
+      (at 71.12 57.15 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (property "Description" "Generic connector, single row, 01x01, script generated" 
+      (at 71.12 57.15 0) 
+      (effects 
+        (font 
+          (size 1.27 1.27)) 
+        (hide yes))) 
+    (pin "1" 
+      (uuid "6f1bf815-c059-4394-b265-b9efc17e3d98")) 
+    (instances 
+      (project "mounted_cap_sense_v1" 
+        (path "/77d8b71f-e4e8-4284-bc30-b01998247625" 
+          (reference "J4") 
+          (unit 1))))) 
+  (sheet_instances 
+    (path "/" 
+      (page "1"))) 
+  (embedded_fonts no))
