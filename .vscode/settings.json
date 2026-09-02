@@ -1,3 +1,16 @@
 {
-    "idf.pythonInstallPath": "/usr/local/bin/python3"
+    "python.testing.pytestEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}/software",
+    "python.testing.pytestArgs": ["tests"],
+    "python.analysis.extraPaths": ["software/src"],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.egg-info": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true
+    },
+    "search.exclude": {
+        "**/venv*": true,
+        "**/*-backups/**": true
+    }
 }

@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "capcup"
+version = "0.1.0"
+authors = [
+  { name = "Alex Choi", email = "alexander.e.choi@gmail.com" },
+]
+description = "Recording and analyzing capacitance data from the smart suction cup project."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "trimesh",
+]
+
+[project.optional-dependencies]
+# The Jubilee ground-truth scripts (src/capcup/jubilee/) additionally need
+# `jubilee_controller`, installed separately from
+# https://github.com/machineagency/science-jubilee (not on PyPI).
+#
+# Notebook / analysis workflow (software/notebooks/)
+notebooks = [
+    "ipykernel",
+    "ipympl",
+    "notebook",
+    "scipy",
+    "ruptures",
+    "torch",
+]
+# Development tooling
+dev = [
+    "pytest",
+    "ruff",
+    "nbstripout",
+    "pre-commit",
+]
+
+[project.scripts]
+capcup-record = "capcup.udp_receiver:main"
+
+[project.urls]
+Homepage = "https://github.com/aechoi/smart-suction"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/capcup"]
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+extend-select = ["I"]  # import sorting
