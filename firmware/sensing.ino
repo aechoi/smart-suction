@@ -80,7 +80,7 @@ void take_measurements(long* cap_vals) {
 
   for (int i = 0; i < senseLength; ++i) {
     setMux(i);
-    delayMicroseconds(300);    
+    delayMicroseconds(300);
 
     writeRegister(REG_CONF, 0b00010010); // Request a single conversion sample
     while (!newDataReady) {} // wait for interrupt
