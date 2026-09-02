@@ -69,8 +69,8 @@ class Probe:
         if isinstance(length, (float, int)):
             length = np.full(self._num_rays, length)
 
-        for meas_point, l in zip(self._meas_points, length):
-            line = np.vstack([meas_point, meas_point + self._orientation * l])
+        for meas_point, ray_len in zip(self._meas_points, length):
+            line = np.vstack([meas_point, meas_point + self._orientation * ray_len])
             lines.append(tm.load_path(line))
 
         return lines

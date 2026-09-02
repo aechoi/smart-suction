@@ -1,13 +1,13 @@
 import argparse
-from collections import deque
-import time
 import socket
 import struct
+import time
+from collections import deque
 
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.patches import Arc
 from matplotlib.widgets import Button
-import numpy as np
 
 # UDP Setup
 # UDP_IP = "192.168.1.50"

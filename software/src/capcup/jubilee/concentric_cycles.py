@@ -1,15 +1,15 @@
-import typing
-import numpy as np
 import time
 
+import numpy as np
 from jubilee_controller.jubilee_controller import JubileeMotionController
+
 from capcup.jubilee import cup_configs
 
 CLEAR = np.array([0, 0, 5])
 
 
 def load_unload(
-    jubilee: JubileeMotionController, dwell: float, displacements: typing.List[float]
+    jubilee: JubileeMotionController, dwell: float, displacements: list[float]
 ):
     """
     Args

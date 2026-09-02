@@ -1,7 +1,7 @@
-import numpy as np
 # import pandas as pd
 import csv
 
+import numpy as np
 from jubilee_controller.jubilee_controller import JubileeMotionController
 
 
@@ -21,7 +21,8 @@ def main():
     with open("ground_truth_x1000.csv", newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",")
         for idx, row in enumerate(reader):
-            if idx == 0: continue
+            if idx == 0:
+                continue
             position = np.array(row[:3], dtype=float)
             orientation = np.array(row[3:-1], dtype=float)
             
