@@ -1,4 +1,63 @@
-venv*
+# ─────────────────────────────────────────────────────────────
+# Python / software
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv*/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (raw captures live outside git; see software/README.md)
 *.csv
 data/
-*.pyc
+
+# Trained model weights (regenerate from notebooks or fetch from Releases)
+*.pt
+*.pth
+*.onnx
+
+# Generated analysis figures
+figs/
+software/figs/
+
+# ─────────────────────────────────────────────────────────────
+# KiCad / hardware
+# ─────────────────────────────────────────────────────────────
+*-backups/
+*.kicad_prl
+fp-info-cache
+_autosave-*
+*.bak
+*-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+~*.lck
+\#auto_saved_files#
+
+# ─────────────────────────────────────────────────────────────
+# Firmware (Arduino / ESP-IDF / PlatformIO)
+# ─────────────────────────────────────────────────────────────
+.pio/
+sdkconfig.old
+managed_components/
+
+# ─────────────────────────────────────────────────────────────
+# Editor / OS
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
